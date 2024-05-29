@@ -1,0 +1,41 @@
+#num-area{
+    display: flex;
+    flex-wrap: wrap;
+}
+#calc{
+    display: flex;
+    width: 225px;
+    height: 250px;
+}
+#display{
+    width: 225px;
+    height: 55.2px;
+    border: solid;
+    border-color:brown;
+    box-sizing: border-box;
+}
+#operator-area{
+    display: flex;
+    flex-direction: column;
+    width: 50%; 
+}
+.num-column{
+    flex-basis:calc(100%/3);
+}
+.op-column{
+    flex-basis: calc(100%/3);
+}
+button{
+    background-color: #615efa;
+
+}
+.number{
+    background-color: #8acff2;
+}
+.operator{
+    background-color: #f28a8c;
+}
+.spl-operator{
+    background-color: #54c6ff;
+
+}
