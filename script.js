@@ -93,12 +93,21 @@ function calculateNDisplayResult() {
     num2 = null;
     return result;
 }
-
+const backspace = document.querySelector("#backspace")
+backspace.addEventListener("click", ()=>{
+    displayValue = displayValue.slice(0,-1);
+    display.textContent = displayValue;
+})
+const ce = document.querySelector("#ce")
+ce.addEventListener("click", ()=>{
+    displayValue = "";
+    display.textContent = displayValue;
+})
 function drawCalc() {
     const numArea = document.querySelector("#num-area");
     createButton("?", "num-column", numArea);
-    createButton("CE", "num-column", numArea);
-    createButton("<-", "num-column", numArea);
+    createButton("CE", "num-column", numArea, "ce");
+    createButton("<-", "num-column", numArea, "backspace");
 
     for (let i = 9; i >= 0; i--) {
         createButton(i, ["num-column", "number"], numArea);
